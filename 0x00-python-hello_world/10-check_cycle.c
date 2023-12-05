@@ -9,6 +9,10 @@ int check_cycle(listint_t *list)
 {
 	listint_t *h = list, *check = list;
 
+	if (list == NULL)
+	{
+		return (0);
+	}
 	while (h->next != NULL)
 	{
 		if (h->next == check)
