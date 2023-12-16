@@ -20,7 +20,6 @@ int check_cycle(listint_t *list)
 			return (1);
 		}
 		h = h->next;
-		hare = hare->next->next;
 	}
 	return (0);
 }
