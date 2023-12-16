@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 	{
 		return (0);
 	}
-	while (h->next != NULL && hare != NULL)
+	while (h->next != NULL && hare->next->next != NULL)
 	{
 		if (h->next == check)
 		{
@@ -23,7 +23,7 @@ int check_cycle(listint_t *list)
 		hare = hare->next->next;
 		if (h == hare)
 		{
-			return(1);
+			return (1);
 		}
 	}
 	return (0);
