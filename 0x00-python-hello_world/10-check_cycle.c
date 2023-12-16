@@ -7,7 +7,7 @@
 */
 int check_cycle(listint_t *list)
 {
-	listint_t *h = list, *check = list;
+	listint_t *h = list, *check = list, *hare = list;
 
 	if (list == NULL)
 	{
@@ -20,6 +20,11 @@ int check_cycle(listint_t *list)
 			return (1);
 		}
 		h = h->next;
+		hare = hare->next->next;
+		if (h == hare)
+		{
+			return(1);
+		}
 	}
 	return (0);
 }
