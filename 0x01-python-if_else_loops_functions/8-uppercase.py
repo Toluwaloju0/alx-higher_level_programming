@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def uppercase(str):
-    """To print a string in uppercae letters"""
     for i in range(len(str)):
         if (ord(str[i]) >= 97) and (ord(str[i]) <= 122):
             x = ord(str[i]) - 32
