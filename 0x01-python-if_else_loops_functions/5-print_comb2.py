@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-for i in range(10):
-    j = 0
-    print(i, j, end="")
-    j = j + 1
-    continue
+for i in range(99):
+    print("{:02d}, ".format(i), end="")
+print("{:d}".format(99))
