@@ -6,8 +6,8 @@ def divisible_by_2(my_list=[]):
     i = 0
     for a in my_list:
         if (a % 2) == 0:
-            new_list[a] = True
+            new_list[i] = True
         else:
-            new_list[a] = False
+            new_list[i] = False
         i = i + 1
     return new_list
