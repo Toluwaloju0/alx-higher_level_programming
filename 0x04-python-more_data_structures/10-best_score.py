@@ -10,6 +10,7 @@ def highest_score(a_dictionary):
             c = b
     return c
 
+
 def best_score(a_dictionary):
     """
     best_score - to find the best score in a dictionary
