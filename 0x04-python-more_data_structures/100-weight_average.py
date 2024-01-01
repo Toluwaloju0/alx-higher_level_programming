@@ -5,7 +5,7 @@ def weight_average(my_list=[]):
     my_list: the list to be affected
     """
 
-    if my_list is None:
+    if my_list is None or my_list == []:
         return 0
     a = 0
     c = 0
