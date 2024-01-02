@@ -1,1 +1,1 @@
-Higher levl programming such as Python, Java e.t.c
+0x01. Python - if/else, loops, functions
