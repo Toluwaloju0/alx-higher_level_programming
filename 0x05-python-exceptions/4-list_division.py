@@ -8,8 +8,10 @@ def list_division(my_list_1, my_list_2, list_length):
         for a in range(list_length):
             if not isinstance(my_list_2[a], (int, float)):
                 print("wrong type")
+            if not isinstance(my_list_2[a], (int, float)):
+                print("wrong type")
                 continue
-            if my_list_1[a] == 0 or my_list_2[a] == 0:
+            if my_list_2[a] == 0:
                 print("division by 0")
                 continue
             new_list[a] = my_list_1[a] / my_list_2[a]
