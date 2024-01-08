@@ -8,6 +8,7 @@ def list_division(my_list_1, my_list_2, list_length):
         for a in range(list_length):
             if not isinstance(my_list_2[a], (int, float)):
                 print("wrong type")
+                continue
             if not isinstance(my_list_2[a], (int, float)):
                 print("wrong type")
                 continue
