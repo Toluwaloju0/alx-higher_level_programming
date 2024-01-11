@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""To set the position where a square os to be printed
+"""
+
+
 class Square:
     """A class of squares
     """
@@ -15,6 +19,7 @@ class Square:
         if len(position) != 2 or position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
+
     @property
     def size(self):
         """to set the size of the square
@@ -36,7 +41,7 @@ class Square:
     @property
     def position(self):
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         if len(value) != 2 or value[0] < 0 or value[1] < 0:
@@ -47,6 +52,7 @@ class Square:
         """The area of the square
         """
         return self.__size ** 2
+
     def my_print(self):
         """to print the square using #
         """

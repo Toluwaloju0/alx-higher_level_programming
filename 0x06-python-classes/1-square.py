@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""To define a class and assign it initial values
+"""
+
+
 class Square:
     """A class of a square
     """

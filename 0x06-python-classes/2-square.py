@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""To define the values of the private instances of a class
+"""
+
+
 class Square:
     """A class of square
     """
