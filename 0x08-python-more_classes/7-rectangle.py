@@ -77,6 +77,8 @@ class Rectangle:
         """To return a string of a rectangle"""
         if self.__width == 0 or self.__height == 0:
             return ""
+        if type(self.print_symbol) is int:
+            self.print_symbol = str(self.print_symbol)
         if type(self.print_symbol) is list:
             for a in range(self.__height):
                 for b in range(self.__width):
