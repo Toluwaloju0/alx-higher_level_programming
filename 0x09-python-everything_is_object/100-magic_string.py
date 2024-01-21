@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-def magic_string();
-    return "BestSchool"
+a = [0]
+def magic_string():
+    a[0] += 1
+    return ("BestSchool" * (a[0]))

@@ -9,4 +9,4 @@ def lookup(obj):
         obj (class): A class
     """
 
-    return list(obj.__dict__)
+    return dir(obj)
