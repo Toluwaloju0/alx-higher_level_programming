@@ -1,0 +1,19 @@
+# The test cases for 3-say_my_name
+
+```python
+>>> print = __import__("3-say_my_name").say_my_name
+
+>>> print("Tolu", "Kayode")
+My name is Tolu Kayode
+>>> print("Myself", "You")
+My name is Myself You
+
+This is the end of passed tests
+>>> print(1, "Kayode")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>> print("Tolu", 12)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+```

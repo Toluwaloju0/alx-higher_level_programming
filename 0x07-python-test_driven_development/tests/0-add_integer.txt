@@ -1,30 +1,19 @@
-"""
-Test cases for the add_integer function.
+#Test cases for the add_integer function.
 
->>> add_integer(1, 2)
-3
+```python
+>>> add_integer = __import__("0-add_integer").add_integer
+
+>>> add_integer(100, 200)
+300
 >>> add_integer(-1, 1)
 0
->>> add_integer(0, 0)
-0
-"""
 
-def add_integer(a, b=98):
-   """
-   Adds two numbers together.
+This is the end of passed tests
+>>> add_integer(10, 'a')
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> add_integer('a', 100)
+Traceback (most recent call last):
+TypeError: a must be an integer
 
-   :param a: The first number
-   :type a: int or float
-   :param b: The second number
-   :type b: int or float
-   :return: The sum of a and b
-   :rtype: int
-   """
-   if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
-       raise TypeError("a must be an integer or b must be an integer")
-   
-   # Cast to int if they are float
-   a = int(a)
-   b = int(b)
-   
-   return a + b
+```
