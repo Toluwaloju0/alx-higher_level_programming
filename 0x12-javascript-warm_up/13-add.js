@@ -5,4 +5,4 @@ exports.add = function (a, b) {
   } else {
     return a + b;
   }
-}
+};
