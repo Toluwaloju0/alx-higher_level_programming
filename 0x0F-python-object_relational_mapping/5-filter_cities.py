@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    cur.execute(f"SELECT cities.name FROM cities WHERE cities.state_id = (i\
+    cur.execute(f"SELECT cities.name FROM cities WHERE cities.state_id = (\
 SELECT id FROM states WHERE name LIKE '{argv[4]}')")
     cities = cur.fetchall()
 
