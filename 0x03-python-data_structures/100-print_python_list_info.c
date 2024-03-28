@@ -25,7 +25,5 @@ void print_python_list_info(PyObject *p)
 		item = PyUnicode_AsEncodedString(item, "utf-8", "strict");
 		item_type = PyBytes_AsString(item);
 		printf("Element %ld: %s\n", a, item_type);
-
-		Py_DECREF(item);
 	}
 }
