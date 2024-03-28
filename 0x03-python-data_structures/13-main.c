@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * main - create even numbered non-palindrome and check if it is a palindrome
+ * main - create one node list palindrome and check if it is a palindrome
  *
  * Return: Always 0.
  */
@@ -12,16 +12,7 @@ int main(void)
 	listint_t *head;
 
 	head = NULL;
-	add_nodeint_end(&head, 1);
-	add_nodeint_end(&head, 17);
 	add_nodeint_end(&head, 972);
-	add_nodeint_end(&head, 50);
-	add_nodeint_end(&head, 98);
-	add_nodeint_end(&head, 98);
-	add_nodeint_end(&head, 42);
-	add_nodeint_end(&head, 972);
-	add_nodeint_end(&head, 17);
-	add_nodeint_end(&head, 1);
 	print_listint(head);
 
 	if (is_palindrome(&head) == 1)

@@ -32,36 +32,34 @@ int is_palindrome(listint_t **head)
 
 	if (head == NULL)
 	{
-		return (1);
+		return (0);
 	}
 
 	h = *head;
 	len = l_size(head);
 	if (len == 1)
 	{
-		return (0);
+		return (1);
 	}
 	while (h != NULL)
 	{
-		a = *head;
+		a = h;
 		b = 0;
 		while (b < len)
 		{
-			if (h->n == a->n)
-			{
-				a = a->next;
-				b++;
-				continue;
-			}
-			else
-			{
-				return (1);
-			}
 			a = a->next;
 			b++;
+		}
+		if (h->n == a->n)
+		{
+			continue;
+		}
+		else
+		{
+			return (0);
 		}
 		h = h->next;
 		len--;
 	}
-	return (0);
+	return (1);
 }
