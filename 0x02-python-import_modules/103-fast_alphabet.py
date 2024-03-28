@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-import string
-print(''.join(getattr(string, 'ascii_uppercase')))
+import functools
+print(functools.reduce(lambda x, y: x + y, map(chr, range(65, 91))))
