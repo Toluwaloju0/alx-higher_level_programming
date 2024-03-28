@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * l_size - to find the lingth of a linked list
@@ -22,7 +23,7 @@ int l_size(listint_t **head)
 /**
 * is_palindrome - to check if a list is empty
 * @head: pointer to the list
-* Return: 1 if empty, 0 if not empty
+* Return: 1 if palindrome, 0 if not
 */
 
 int is_palindrome(listint_t **head)
@@ -41,17 +42,19 @@ int is_palindrome(listint_t **head)
 	{
 		return (1);
 	}
-	while (h != NULL)
+	while (h)
 	{
-		a = h;
+		a = *head;
 		b = 0;
-		while (b < len)
+		while (b < len - 1)
 		{
 			a = a->next;
 			b++;
 		}
 		if (h->n == a->n)
 		{
+			h = h->next;
+			len--;
 			continue;
 		}
 		else
