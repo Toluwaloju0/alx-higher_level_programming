@@ -66,7 +66,7 @@ class Square:
         """
         if self.__size == 0:
             print("")
-            return None
+            exit()
         for b in range(self.__position[1]):
             print("")
         for a in range(self.__size):
@@ -75,9 +75,11 @@ class Square:
             for b in range(self.__size):
                 print("#", end="")
             print("")
-        return ("")
+        exit()
 
     def __str__(self):
         """A method to print the string"""
 
-        return(self.my_print())
+        a = self.my_print()
+        if a is None:
+            return
