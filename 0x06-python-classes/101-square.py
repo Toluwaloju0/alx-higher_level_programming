@@ -64,15 +64,20 @@ class Square:
     def my_print(self):
         """to print the square using #
         """
-        s = " "
         if self.__size == 0:
             print("")
+            return None
+        for b in range(self.__position[1]):
+            print("")
         for a in range(self.__size):
-#            if self.__position[1] > 0:
-#                s = "_"
             for b in range(self.__position[0]):
-                print(s, end="")
+                print(" ", end="")
             for b in range(self.__size):
                 print("#", end="")
             print("")
         return ("")
+
+    def __str__(self):
+        """A method to print the string"""
+
+        return(self.my_print())
