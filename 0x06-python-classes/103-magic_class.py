@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""To perform a byte code operation"""
+
 import math
 
 
 class MagicClass:
+    """The class of Magicclass"""
+
     def __init__(self, radius):
         if not isinstance(radius, (int, float)):
             raise TypeError('radius must be a number')
