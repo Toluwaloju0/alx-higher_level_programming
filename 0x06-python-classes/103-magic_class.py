@@ -8,6 +8,8 @@ class MagicClass:
     """The class of Magicclass"""
 
     def __init__(self, radius):
+        if radius is None:
+            return None
         if not isinstance(radius, (int, float)):
             raise TypeError('radius must be a number')
         self._MagicClass__radius = radius
