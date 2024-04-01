@@ -45,7 +45,7 @@ class Square:
 
         return self.area() == other.area()
 
-    def __ne__(self,other):
+    def __ne__(self, other):
         """To check if a class is not equal"""
 
         return not self.__eq__(other)
