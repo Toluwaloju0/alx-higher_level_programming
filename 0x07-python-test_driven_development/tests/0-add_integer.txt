@@ -11,6 +11,10 @@
 99
 >>> add_integer(0)
 98
+>>> add_integer(1.1, 1.1)
+2
+>>> add_integer(float('inf'), 100)
+89
 
 This is the end of passed tests
 >>> add_integer(10, 'a')
