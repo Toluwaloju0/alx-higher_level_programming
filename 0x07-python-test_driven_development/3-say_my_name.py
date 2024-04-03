@@ -14,7 +14,7 @@ def say_my_name(first_name="", last_name=""):
     if type(last_name) is not str:
         raise TypeError("last_name must be a string")
 
-    if first_name is None and last_name is None:
+    if first_name == "" and last_name == "":
         print("My name is")
         return None
     print("My name is {} {}".format(first_name, last_name))
