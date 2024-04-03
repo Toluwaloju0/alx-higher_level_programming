@@ -4,6 +4,11 @@
 
 
 def matrix_divided(matrix, div):
+    """A function to divide a matrix by a number
+    Args:
+        matrix(list of list): the list of list to be divided
+        div(int, float): the number matrix would be divided
+        """
     new_matrix = []
 
     if matrix is None:
