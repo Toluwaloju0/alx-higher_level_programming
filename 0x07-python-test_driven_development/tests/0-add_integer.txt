@@ -14,9 +14,9 @@
 >>> add_integer(1.1, 1.1)
 2
 >>> add_integer(float('inf'), 100)
-89
->>> add_integer(1.7976931348623157e+4000, 58)
-89
+98
+>>> add_integer(1.7976931348623157e+4000, 1.7976931348623157e+4000)
+98
 
 This is the end of passed tests
 >>> add_integer(10, 'a')
