@@ -3,7 +3,7 @@
 """A module that divides a matrix"""
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix, div=2):
     """A function to divide a matrix by a number
     Args:
         matrix(list of list): the list of list to be divided
