@@ -19,5 +19,7 @@ ValueError: size must be >= 0
 >>> print_square(7.99)
 Traceback (most recent call last):
 TypeError: size must be an integer
+>>> print_square()
+
 
 ```

@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 """A module to print a square"""
 
+
 def print_square(size):
     """A function to print a square
     Args:
         size(int): the size of the square
     """
 
+    if size is None:
+        return None
     if type(size) is not int:
         raise TypeError("size must be an integer")
 
@@ -21,4 +24,4 @@ def print_square(size):
     for a in range(size):
         for b in range(size):
             print("#", end="")
-        print ("")
+        print("")
