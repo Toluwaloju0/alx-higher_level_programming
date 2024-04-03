@@ -2,7 +2,7 @@
 """A module to print a square"""
 
 
-def print_square(size):
+def print_square(size=0):
     """A function to print a square
     Args:
         size(int): the size of the square
