@@ -2,6 +2,7 @@
 """This is an addition module
 """
 
+
 def add_integer(a, b=98):
     """To add two integers
     Args:
@@ -20,4 +21,4 @@ def add_integer(a, b=98):
     result = a + b
     if result == float('inf') or result == -float('inf'):
         return 89
-    return int(a) + int(b)
+    return int(result)
