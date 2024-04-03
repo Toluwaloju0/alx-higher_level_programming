@@ -7,6 +7,10 @@
 300
 >>> add_integer(-1, 1)
 0
+>>> add_integer(1)
+99
+>>> add_integer(0)
+98
 
 This is the end of passed tests
 >>> add_integer(10, 'a')
