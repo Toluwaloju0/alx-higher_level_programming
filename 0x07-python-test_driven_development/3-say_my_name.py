@@ -2,7 +2,7 @@
 """A module to print a name"""
 
 
-def say_my_name(first_name, last_name=""):
+def say_my_name(first_name="", last_name=""):
     """A function that print a string
     Args:
         first_name (str): the first name of the object

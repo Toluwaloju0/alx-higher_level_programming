@@ -12,6 +12,8 @@ This is the end of passed tests
 >>> print(1, "Kayode")
 Traceback (most recent call last):
 TypeError: first_name must be a string
+>>> print()
+My name is
 >>> print("Tolu", 12)
 Traceback (most recent call last):
 TypeError: last_name must be a string
