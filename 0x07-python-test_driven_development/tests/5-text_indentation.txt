@@ -24,7 +24,12 @@ Continue here:
 And write this
 >>> indent("     python, is good. Break here?       Continue here:    And write this?      ")
 python, is good.
-<BLANKLINE>                                           Break here?                                           <BLANKLINE>                                           Continue here:                                        <BLANKLINE>
+<BLANKLINE>
+Break here?
+<BLANKLINE>
+Continue here:
+<BLANKLINE>
 And write this?
+<BLANKLINE>
 
 ```
