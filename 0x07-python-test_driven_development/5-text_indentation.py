@@ -40,7 +40,7 @@ def text_indentation(text=""):
                 break
             continue
         if a == b:
-            print(text[a] + '\n')
+            print(text[a])
             break
         print(text[a], end='')
         a = a + 1
