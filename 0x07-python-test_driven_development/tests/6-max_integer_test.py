@@ -10,3 +10,10 @@ class TestMaxInteger(unittest.TestCase):
         #To test max integers for numbers
         self.assertAlmostEqual(max_integer([1, 2, 3, 4, 7, 8, 5, -1]), 8)
         self.assertAlmostEqual(max_integer([10, 40, 200, 180, 199]), 200)
+        self.assertAlmostEqual(max_integer([200, 40, 10, 180, 199]), 200)
+        self.assertAlmostEqual(max_integer([1, 40, 10, 18, -3]), 40)
+        self.assertAlmostEqual(max_integer([10]), 10)
+        self.assertAlmostEqual(max_integer([10, 40, 200, 180, 199]), 200)
+        self.assertAlmostEqual(max_integer([-10, -40, -200, -180]), -10)
+        self.assertAlmostEqual(max_integer([10, 40, 200, 180, 199]), 200)
+        self.assertAlmostEqual(max_integer([]), None)
