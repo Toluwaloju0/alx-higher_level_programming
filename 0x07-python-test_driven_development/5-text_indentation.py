@@ -41,6 +41,6 @@ def text_indentation(text=""):
             continue
         if a == b:
             print(text[a] + '\n')
-            return None
+            break
         print(text[a], end='')
         a = a + 1
