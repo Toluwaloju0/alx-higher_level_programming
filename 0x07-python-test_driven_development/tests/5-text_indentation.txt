@@ -1,0 +1,30 @@
+#A test modile for 5-text_indentation.py
+
+```python3
+>>> indent = __import__('5-text_indentation').text_indentation
+
+>>> indent()
+
+>>> indent("py.  y? good, vim")
+py.
+<BLANKLINE>
+y?
+<BLANKLINE>
+good, vim
+
+>>> indent(None)
+
+>>> indent("     python, is good. Break here?       Continue here:    And write this")
+python, is good.
+<BLANKLINE>
+Break here?
+<BLANKLINE>
+Continue here:
+<BLANKLINE>
+And write this
+>>> indent("     python, is good. Break here?       Continue here:    And write this?      ")
+python, is good.
+<BLANKLINE>                                           Break here?                                           <BLANKLINE>                                           Continue here:                                        <BLANKLINE>
+And write this?
+
+```
