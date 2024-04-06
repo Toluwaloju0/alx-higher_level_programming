@@ -48,10 +48,16 @@ def matrix_mul(m_a, m_b):
             if len(m_b[a]) != len(m_b[a - 1]):
                 raise TypeError("each row of m_b must be of the same")
 
-    # To check if the rowa and columns are of the same size
+    # To check if the rows and columns are of the same size
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
 
     # The multiplication method
     my_matrix = [[0 for _ in range(len(m_a))] for _ in range(len(m_b[0]))]
 
+    for i in range(len(m_a)):
+        for j in range(len(m_b[0])):
+            for k in range(len(m_b)):
+                my_matrix[i][j] += m_a[i][k] * m_b[k][j]
+
+    return my_matrix
