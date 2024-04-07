@@ -9,6 +9,6 @@ def inherits_from(obj, a_class):
         a_class: the class to be teste against
     """
 
-    if type(obj) is a_class:
+    if isinstance(obj, (a_class)):
         return True
     return False
