@@ -20,7 +20,8 @@
 >>> print(List_1)
 [9, 7, 2, -44, 1]
 >>> my_list = list()
-[]
+
 >>> my_list.print_sorted()
+[]
 
 ```
