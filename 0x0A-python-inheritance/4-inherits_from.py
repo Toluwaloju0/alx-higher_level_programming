@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""A module to check if a class inherits fromm another class"""
+"""A module to check if a class \
+inherits fromm another class"""
 
 
 def inherits_from(obj, a_class):
