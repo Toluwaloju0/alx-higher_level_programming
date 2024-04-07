@@ -7,6 +7,6 @@ class MyList(list):
 
     def print_sorted(self):
         """A function that prints the listin sorted form"""
-        
+
         a = sorted(self)
-        print (a)
+        print(a)
