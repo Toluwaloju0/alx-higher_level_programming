@@ -7,10 +7,10 @@
 >>> base.integer_validator("Person", 65)
 
 >>> base.integer_validator("Person", -65)
-Traceback (most recent call last)
+Traceback (most recent call last):
 ValueError: Person must be greater than 0
 >>> base.integer_validator("Person", "Null")
-Traceback (most  recent call last)
+Traceback (most recent call last):
 TypeError: Person must be an integer
 
 ```
