@@ -11,11 +11,16 @@
 
 >>> List_1.append(2)
 
->>> List_1.append(44)
+>>> List_1.append(-44)
 
 >>> List_1.append(1)
 
 >>> List_1.print_sorted()
-[1, 2, 7, 9, 44]
+[-44, 1, 2, 7, 9]
 >>> print(List_1)
-[9, 7, 2, 44, 1]
+[9, 7, 2, -44, 1]
+>>> my_list = list()
+[]
+>>> my_list.print_sorted()
+
+```
