@@ -4,8 +4,10 @@
 
 class BaseGeometry:
     """A class named basedgeometry"""
-    
-    def integer_validator(self, name, value):
+
+    def integer_validator(self, name="", value=0):
+        if len(name) == 0:
+            return None
         self.name = name
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(self.name))
