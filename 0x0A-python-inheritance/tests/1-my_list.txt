@@ -1,0 +1,21 @@
+# Tests for 1-my_list.py
+
+```Python3
+>>> list = __import__('1-my_list').MyList
+
+>>> List_1 = list()
+
+>>> List_1.append(9)
+
+>>> List_1.append(7)
+
+>>> List_1.append(2)
+
+>>> List_1.append(44)
+
+>>> List_1.append(1)
+
+>>> List_1.print_sorted()
+[1, 2, 7, 9, 44]
+>>> print(List_1)
+[9, 7, 2, 44, 1]
