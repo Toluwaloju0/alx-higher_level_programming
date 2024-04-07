@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""To create an emoty class"""
+"""To create a class and dedine some methods"""
 
 
 class BaseGeometry:
