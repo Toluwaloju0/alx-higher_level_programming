@@ -31,8 +31,8 @@ def matrix_mul(m_a, m_b):
         for b in m_a[a]:
             if not isinstance(b, (int, float)):
                 raise TypeError("m_a should contain only integers or floats")
-        if a > 1:
-            if len(m_a[a]) != len(m_a[a - 1]):
+        if a > 0:
+            if len(m_a[a]) != len(m_a[0]):
                 raise TypeError("each row of m_a must be of the same")
 
     # To check if each elements in m_b is a list, the value type and length
@@ -44,7 +44,7 @@ def matrix_mul(m_a, m_b):
         for b in m_b[a]:
             if not isinstance(b, (int, float)):
                 raise TypeError("m_b should contain only integers or floats")
-        if a > 1:
+        if a > 0:
             if len(m_b[a]) != len(m_b[a - 1]):
                 raise TypeError("each row of m_b must be of the same")
 
@@ -55,9 +55,12 @@ def matrix_mul(m_a, m_b):
     # The multiplication method
     my_matrix = [[0 for _ in range(len(m_a))] for _ in range(len(m_b[0]))]
 
-    for i in range(len(m_a)):
-        for j in range(len(m_b[0])):
-            for k in range(len(m_b)):
-                my_matrix[i][j] += m_a[i][k] * m_b[k][j]
-
+    try:
+        for i in range(len(m_a)):
+            for j in range(len(m_b[0])):
+                for k in range(len(m_b)):
+                    my_matrix[i][j] += m_a[i][k] * m_b[k][j]
+    except IndexError:
+        print(my_matrix)
+        raise
     return my_matrix
