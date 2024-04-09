@@ -3,6 +3,10 @@
 
 
 def pascal_triangle(n):
+    """A function to create pascal triangle of n
+    Args:
+        n (int): the height of the triangle
+    """
     my_list = []
     a = 0
 
