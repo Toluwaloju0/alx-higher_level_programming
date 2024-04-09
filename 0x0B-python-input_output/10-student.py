@@ -15,9 +15,10 @@ class Student:
     def to_json(self, attrs=None):
         """To retrieve the dict of the class"""
 
-        my_dict = {}
+       if attrs is None:
+           return self.__dict__
+       my_dict = {}
         for a in attrs:
             my_dict[a] = getattr(self, a)
         if len(my_dict != 0):
             return my_dict
-        return self.__dict__
