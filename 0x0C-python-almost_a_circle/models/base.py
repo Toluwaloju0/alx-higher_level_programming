@@ -2,7 +2,7 @@
 """A module to create a new class"""
 
 
-from json import dumps
+from json import dumps, loads
 
 
 class Base:
@@ -42,3 +42,12 @@ class Base:
 
         with open(filename, mode='w', encoding='utf-8') as a:
             a.write(Base.to_json_string(my_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """A function to return a list of dictionaries"""
+
+        if json_string is None:
+            return []
+
+        return loads(json_string)
