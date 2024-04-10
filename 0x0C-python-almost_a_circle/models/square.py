@@ -52,3 +52,13 @@ class Square(Rectangle):
             self.x = args[2]
         if len(args) >= 4:
             self.y = args[3]
+
+    def to_dictionary(self):
+        """To retrurn a dictionary of the class"""
+
+        my_dict = {}
+        my_dict['id'] = self.id
+        my_dict['size'] = self.width
+        my_dict['x'] = self.x
+        my_dict['y'] = self.y
+        return my_dict
