@@ -75,8 +75,8 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
-        
-        self._x = value
+
+        self.__x = value
 
     @property
     def y(self):
