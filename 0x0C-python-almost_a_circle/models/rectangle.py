@@ -113,7 +113,9 @@ class Rectangle(Base):
     def __str__(self):
         """To return a strin of rectangle"""
 
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        a = "[Rectangle] ({}) ".format(self.id)
+        b = "{}/{} - {}/{}".format(self.x, self.y, self.width, self.height)
+        return a + b
 
     def update(self, *args, **kwargs):
         """To update a xss instance"""
