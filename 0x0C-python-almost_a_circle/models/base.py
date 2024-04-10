@@ -51,3 +51,14 @@ class Base:
             return []
 
         return loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """A function to create a new class"""
+
+        if cls.__name__ == "Rectangle":
+            a = cls(1, 1)
+        elif cls.__name__ == "Square":
+            a = cls(1)
+        a.update(**dictionary)
+        return a
