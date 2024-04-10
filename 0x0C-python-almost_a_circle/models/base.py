@@ -2,6 +2,9 @@
 """A module to create a new class"""
 
 
+from json import dumps
+
+
 class Base:
     """A new class called Base"""
 
@@ -15,3 +18,10 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    def to_json_string(list_dictionaries):
+        """To convert a dictionary list to a json strong"""
+
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            list_dictionaries = []
+        return dumps(list_dictionaries)
