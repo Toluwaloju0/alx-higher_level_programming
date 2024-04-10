@@ -86,7 +86,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """A setter method for y"""
-        if type(width) is not int:
+        if type(value) is not int:
             raise TypeError("y must be an integer")
         if value <= 0:
             raise ValueError("y must be >= 0")
