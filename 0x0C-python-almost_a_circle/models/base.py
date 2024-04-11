@@ -83,3 +83,40 @@ class Base:
             return my_objs
         except FileNotFoundError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """A function to save a class to a file"""
+
+        if list_objs is None:
+            list_objs = []
+        filename = "{}.csv".format(cls.__name__)
+
+        my_list = []
+
+        for a in list_objs:
+            my_list.append(a.to_dictionary())
+
+        with open(filename, mode='w', encoding='utf-8') as a:
+            a.write(Base.to_json_string(my_list))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """To load classes attributes from a string"""
+
+        filename = "{}.csv".format(cls.__name__)
+        my_list = []
+        my_objs = []
+
+        try:
+            with open(filename, mode='r', encoding='utf-8') as a:
+                my_list = Base.from_json_string(a.read())
+
+            if len(my_list) == 0:
+                return []
+            for a in my_list:
+                my_objs.append(cls.create(**a))
+
+            return my_objs
+        except FileNotFoundError:
+            return []
