@@ -71,14 +71,17 @@ class Base:
         my_list = []
         my_objs = []
 
-        with open(filename, mode='r', encoding='utf-8') as a:
-            content = a.read()
+        try:
+            with open(filename, mode='r', encoding='utf-8') as a:
+                my_list = Base.from_json_string(a.read())
 
-        my_list = Base.from_json_string(content)
+            if len(my_list) == 0:
+                return []
+            for a in my_list:
+                my_objs.append(cls.create())
 
-        if len(my_list) == 0:
-            return
-        for a in my_list:
-            my_objs.append(cls.create())
+        except FileNotFoundError:
+            my_list = []
 
-        return my_objs
+        finally:
+            return my_objs
