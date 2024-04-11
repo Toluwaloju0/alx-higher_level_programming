@@ -82,4 +82,4 @@ class Base:
 
             return my_objs
         except FileNotFoundError:
-            my_list = []
+            return []
