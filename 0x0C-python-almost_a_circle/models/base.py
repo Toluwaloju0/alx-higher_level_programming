@@ -62,3 +62,23 @@ class Base:
             a = cls(1)
         a.update(**dictionary)
         return a
+
+    @classmethod
+    def load_from_file(cls):
+        """To load classes attributes from a string"""
+
+        filename = "{}.json".format(cls.__name__)
+        my_list = []
+        my_objs = []
+
+        with open(filename, mode='r', encoding='utf-8') as a:
+            content = a.read()
+
+        my_list = Base.from_json_string(content)
+
+        if len(my_list) == 0:
+            return
+        for a in my_list:
+            my_objs.append(cls.create())
+
+        return my_objs
