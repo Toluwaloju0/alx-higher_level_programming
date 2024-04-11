@@ -77,11 +77,9 @@ class Base:
 
             if len(my_list) == 0:
                 return []
-            for lists in my_list:
-                my_objs.append(cls.create(lists))
+            for a in my_list:
+                my_objs.append(cls.create(**a))
 
+            return my_objs
         except FileNotFoundError:
             my_list = []
-
-        finally:
-            return my_objs
