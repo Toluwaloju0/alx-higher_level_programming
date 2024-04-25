@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS second_table (
     score INT,
     PRIMARY KEY(id));
 
-INSERT IGNORE INTO second_table(name, score) VALUES
+INSERT INTO second_table(name, score) VALUES
     ('John', 10),
     ('Alex', 3),
     ('Bob', 14),
