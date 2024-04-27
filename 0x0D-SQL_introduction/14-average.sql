@@ -2,4 +2,4 @@
 ALTER TABLE second_table
   ADD COLUMN (average INT);
 INSERT INTO second_table VALUES
-  (SELECT AVG score FROM second_table);
+  SELECT AVG score FROM second_table;
