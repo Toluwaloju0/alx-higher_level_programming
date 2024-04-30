@@ -1,2 +1,5 @@
 -- a script to select by the foreign key
-SELECT id, name WHERE state_id = SELECT states.id WHERE states.name LIKE 'California';
+SELECT id, name 
+FROM cities
+WHERE state_id = SELECT id FROM states
+WHERE name LIKE 'California';
