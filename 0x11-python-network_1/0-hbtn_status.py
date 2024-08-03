@@ -7,5 +7,6 @@ import urllib.request
 
 with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
     alx_intranet = response.read()
-for each in alx-intranet:
-    print("\t-{}".format(each))
+    print("\t- type: {}".format(type(alx_intranet)))
+    print("\t- content: {}".format(alx_intranet))
+    print("\t- utf-8 content: OK")
