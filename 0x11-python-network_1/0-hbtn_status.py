@@ -2,10 +2,10 @@
 """A module to fetch a url"""
 
 
-import urllib
+import urllib.request
 
 
 with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
-    alx-intranet = response.read()
+    alx_intranet = response.read()
 for each in alx-intranet:
     print("\t-{}".format(each))
