@@ -4,6 +4,7 @@
 
 import requests
 import sys
+import json
 
 
 url = "https://api.github.com/User/{}".format(sys.argv[1])
@@ -12,4 +13,8 @@ header = {
         'Authorization': "Bearer {}".format(sys.argv[2])
         }
 res = requests.get(url, headers=header)
-print(res.text)
+if res.status_code != 200:
+    print("None")
+    exit()
+res_dict = json.loads(res.text)
+print(res_dict['id'])
