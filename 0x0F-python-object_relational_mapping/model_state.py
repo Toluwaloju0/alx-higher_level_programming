@@ -10,6 +10,8 @@ Base = declarative_base()
 
 
 class State(Base):
+    """A class to create a table in the database"""
+
     __tablename__ = 'states'
 
     id = Column(Integer, primary_key=True, nullable=False)
