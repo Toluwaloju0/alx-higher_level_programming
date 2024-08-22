@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     data = MySQLdb.connect(host='localhost', user=U, passwd=P, db=D)
     cur = data.cursor()
-    state = cur.execute("SELECT * FROM states ORDER BY id")
+    cur.execute("SELECT * FROM states ORDER BY id")
     rows = cur.fetchall()
     for a in rows:
         print(a)

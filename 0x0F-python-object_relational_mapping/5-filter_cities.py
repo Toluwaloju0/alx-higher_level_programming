@@ -17,6 +17,8 @@ if __name__ == "__main__":
 SELECT id FROM states WHERE name LIKE '{argv[4]}')")
     cities = cur.fetchall()
 
+    if (len(cities)) == 0:
+        print("")
     for a in range(len(cities)):
         if a == len(cities) - 1:
             print(cities[a][0])
