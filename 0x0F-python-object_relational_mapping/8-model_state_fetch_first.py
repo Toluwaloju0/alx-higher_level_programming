@@ -13,6 +13,10 @@ if __name__ == "__main__":
     session = Session(bind=engine)
 
     result = session.query(State).order_by(State.id).first()
+    if result is None:
+        print("Nothing")
+        session.close()
+        return
     print("{}: {}".format(result.id, result.name))
 
     session.close()
