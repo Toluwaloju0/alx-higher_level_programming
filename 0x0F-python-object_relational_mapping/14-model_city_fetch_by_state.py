@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ A module to print objects in a cities table"""
 
+
 from model_city import City
 from model_state import Base, State
 from sqlalchemy import create_engine
