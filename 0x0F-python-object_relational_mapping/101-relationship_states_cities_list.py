@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""A module to link two tables toghether"""
+""" A module to print all the states and ...
+their corresponding cities in a database"""
 
 
 from relationship_model_state import State, Base
@@ -12,14 +13,14 @@ from sys import argv
 if __name__ == '__main__':
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/\
 {}".format(argv[1], argv[2], argv[3]), pool_pre_ping=True)
-    
-    Base.metadata.create_all(engine)
 
     session = Session(bind=engine)
 
-    new_state = State(name="California")
-    new_state.cities = [City(name="San Francisco")]
+    result = session.query(State).order_by(State.id).all()
 
-    session.add(new_state)
-    session.commit()
+    for state in result:
+        print(state.id, ":", state.name)
+        for city in state.cities:
+            print("\t", city.id, ":", city.name)
+
     session.close()
