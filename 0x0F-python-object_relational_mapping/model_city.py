@@ -4,7 +4,9 @@
 from model_state import Base
 from sqlalchemy import Column, String, Integer, ForeignKey
 
+
 class City(Base):
+    """A class to map a city table in a mysql database"""
     __tablename__ = 'cities'
 
     id = Column(Integer, primary_key=True, nullable=False)
