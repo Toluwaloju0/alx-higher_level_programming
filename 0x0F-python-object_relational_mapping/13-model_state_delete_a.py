@@ -14,7 +14,11 @@ if __name__ == '__main__':
     session = Session(bind=engine)
 
     row_to_del = session.query(State).filter(State.name.like('%a%')).all()
-    for row in row_to_del:
-        session.delete(row)
+
+    if (len(row_to_del)) == 0:
+        session.close()
+    else:
+        for row in row_to_del:
+            session.delete(row)
     session.commit()
     session.close()
