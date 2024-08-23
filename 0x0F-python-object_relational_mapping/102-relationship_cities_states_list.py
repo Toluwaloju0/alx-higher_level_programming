@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 """A script to query a database"""
 
-
 from relationship_city import City
 from relationship_state import State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from sys import argv
-
 
 if __name__ == '__main__':
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/\

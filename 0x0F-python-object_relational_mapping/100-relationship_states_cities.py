@@ -2,13 +2,11 @@
 """A module to link
 two tables toghether"""
 
-
 from relationship_state import State, Base
 from relationship_city import City
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from sys import argv
-
 
 if __name__ == '__main__':
     engine = create_engine("mysql+mysqldb://{}:{}@localhost/\
