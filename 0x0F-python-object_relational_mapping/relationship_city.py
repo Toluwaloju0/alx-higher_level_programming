@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" A module to create a cities table"""
+"""A module to create a cities table"""
 
 from relationship_model_state import Base
 from sqlalchemy import Column, String, Integer, ForeignKey
