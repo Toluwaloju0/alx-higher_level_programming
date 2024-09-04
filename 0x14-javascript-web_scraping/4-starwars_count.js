@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 const { argv } = require('node:process');
-const keyWord = 'https://swapi-api.alx-tools.com/api/people/18/';
+const keyWord = argv[2].slice(0, -5) + 'people/18/';
 let time = 0;
 let a;
 
